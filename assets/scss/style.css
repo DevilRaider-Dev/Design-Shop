@@ -19,8 +19,8 @@ header nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 5% 0;
 }
 
@@ -36,8 +36,8 @@ header nav ul {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 header nav ul li a {
@@ -49,10 +49,10 @@ header nav ul li a {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-grid-columns: (32%)[3];
-  grid-template-columns: repeat(3, 32%);
+      grid-template-columns: repeat(3, 32%);
   grid-gap: 2%;
   margin-bottom: 10%;
 }
@@ -70,11 +70,12 @@ header nav ul li a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.shopContent .shopItem figcaption h3, .shopContent .shopItem figcaption .shopPrice {
+.shopContent .shopItem figcaption h3,
+.shopContent .shopItem figcaption .shopPrice {
   font-size: 0.9rem;
   color: #323a45;
 }
@@ -86,7 +87,7 @@ header nav ul li a {
 
 .shopContent .shopItem:first-of-type {
   -ms-grid-column: span 3;
-  grid-column-start: span 3;
+      grid-column-start: span 3;
 }
 
 footer section {
@@ -94,13 +95,9 @@ footer section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 5%;
-}
-
-footer article:first-of-type {
-  width: 30%;
 }
 
 footer article {
@@ -109,8 +106,8 @@ footer article {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 20%;
 }
 
@@ -119,17 +116,14 @@ footer article h3 {
   font-size: 1rem;
 }
 
-footer p, footer a {
-  font-size: .8rem;
-}
-
-footer>p {
+footer p {
   margin-bottom: 2%;
   font-size: 0.8rem;
   color: #848484;
 }
 
 footer a {
+  font-size: 0.8rem;
   font-weight: 700;
 }
 
@@ -137,4 +131,48 @@ footer span {
   font-weight: 800;
 }
 
+@media screen and (min-width: 768px) {
+  header nav > a:last-of-type {
+    display: none;
+  }
+  footer section article:first-of-type {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header nav {
+    margin: unset;
+    overflow: hidden;
+    background-color: #848484;
+    position: relative;
+    margin-bottom: 5%;
+  }
+  header nav > a {
+    font-size: 0.8rem;
+  }
+  header nav #navLinks {
+    display: none;
+  }
+  header nav #navLinks a {
+    font-size: 0.6rem;
+  }
+  header nav #navLinks a:hover {
+    background-color: #fff;
+  }
+  .shopContent {
+    display: block;
+  }
+  footer section {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer section article {
+    width: 50%;
+    padding-bottom: 10%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
