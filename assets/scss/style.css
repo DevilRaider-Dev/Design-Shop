@@ -51,7 +51,6 @@ header nav ul li a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-grid-columns: (32%)[3];
       grid-template-columns: repeat(3, 32%);
   grid-gap: 2%;
   margin-bottom: 10%;
